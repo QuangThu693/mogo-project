@@ -1,3 +1,5 @@
+// menuToggle
+
 const menuToggle = document.querySelector(".header-toggle");
 const menuHeader = document.querySelector(".header-menu");
 const expandClass = "is-expand";
@@ -29,4 +31,16 @@ $(document).ready(function () {
   });
 });
 
+// accordion
+const wedoItem = document.querySelector(".wedo-item");
+const wedoItemHeader = document.querySelectorAll(".wedo-item-header");
 
+[...wedoItemHeader].forEach((item) =>
+  item.addEventListener("click", handleAccordion)
+);
+
+function handleAccordion(e) {
+  console.log(e.target.parentNode);
+
+  e.target.parentNode.classList.toggle("is-active");
+}

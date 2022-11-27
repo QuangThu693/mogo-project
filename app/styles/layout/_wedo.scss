@@ -1,8 +1,9 @@
 .wedo {
   padding: 10rem 0;
 
-  &-image {
+  &-image img {
     object-fit: cover;
+    height: auto;
   }
   &-item:not(:last-child) {
     margin-bottom: 1rem;
@@ -10,6 +11,7 @@
 
   &-item.is-active .wedo-item-content {
     display: block;
+    transition: all 0.2s linear;
   }
 
   &-item-header {
@@ -17,6 +19,9 @@
     padding: 1.5rem;
     cursor: pointer;
     border: 1px solid $gray-dark-color;
+  }
+  &-item-header * {
+    pointer-events: none;
   }
   &-item-icon {
     margin-right: 1.5rem;
@@ -88,8 +93,7 @@
   @include maxWidth(767px) {
     padding: 5rem 0;
     &-image {
-        margin-bottom: 2rem;
+      margin-bottom: 2rem;
     }
   }
-
 }

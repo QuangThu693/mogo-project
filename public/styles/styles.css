@@ -559,13 +559,16 @@ button {
 
 .wedo {
   padding: 10rem 0; }
-  .wedo-image {
+  .wedo-image img {
     -o-object-fit: cover;
-    object-fit: cover; }
+    object-fit: cover;
+    height: auto; }
   .wedo-item:not(:last-child) {
     margin-bottom: 1rem; }
   .wedo-item.is-active .wedo-item-content {
-    display: block; }
+    display: block;
+    -webkit-transition: all 0.2s linear;
+    transition: all 0.2s linear; }
   .wedo-item-header {
     -webkit-box-align: center;
     -ms-flex-align: center;
@@ -585,6 +588,8 @@ button {
     padding: 1.5rem;
     cursor: pointer;
     border: 1px solid #cccccc; }
+  .wedo-item-header * {
+    pointer-events: none; }
   .wedo-item-icon {
     margin-right: 1.5rem; }
   .wedo-item-title {
